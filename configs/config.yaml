@@ -1,0 +1,17 @@
+
+# Available Data type : ["labelme", "voc", "coco", "yolo", "dota"]
+from_format: "labelme" #input format you want to change as format "TO".
+to_format: "coco" #output data format changed from FROM
+# YOLO, VOC, Dota Complete 
+
+data_path: "./data/labelme/" #data folder OR data list file
+classes: "./data/labels.txt" #txt file with class label
+output_folder: "./outputs" #path to output folder
+task: "detect" # ["detect", "segm", "keypoint"]
+
+# CoCo format
+random_split: False # (Bool) 
+train_ratio: 0.7 #Ratio of Train-Val-Test(Val : test == 1:1)
+
+# Dota
+normalize: True # normalize the coordinate by image size(w, h)

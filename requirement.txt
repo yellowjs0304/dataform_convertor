@@ -1,0 +1,6 @@
+polygon-pascalvoc-writer
+xmltodict
+opencv-python
+tqdm
+PyYAML
+pillow
