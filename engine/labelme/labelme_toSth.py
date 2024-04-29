@@ -74,7 +74,10 @@ def toCoco(args, polygon, img_w, img_h, obj_nm, obj_id, task, coco_dict):
         w = max(polygon[0::2]) - min(polygon[0::2])
         h = max(polygon[1::2]) - min(polygon[1::2])
         # Detection line shape = [cls_idx, center_x, center_y, w, h]
-        bbox_points = [min(polygon[0::2]) + w/2, min(polygon[1::2]) + h/2, w, h]
+        # bbox_points = [min(polygon[0::2]) + w/2, min(polygon[1::2]) + h/2, w, h]
+
+        # Detection line shape = [Topleft_x, Topeleft_y, w, h]
+        bbox_points = [min(polygon[0::2]), min(polygon[1::2]), w, h]
         category_id = obj_id
         segmentations = polygon
         poly_points =[[x, y] for x, y in zip(polygon[0::2], polygon[1::2])]
