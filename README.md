@@ -46,6 +46,12 @@ normalize: True # normalize the coordinate by image size(w, h)
 ```
 
 - train/val/test.txt is related like below
+
+You can make list.txt file by below command.
+```
+ls *.png > test.txt
+```
+The file looks like below.
 ```
 # list of image sets.
 {DIR_1}/BT_t0.png
